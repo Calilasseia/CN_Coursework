@@ -1,0 +1,194 @@
+
+<!-- HTML starter file -->
+
+<html>
+<head>
+
+<title>The Invertebrates Of Norton Priory</title>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Insert the CSS file reference here, and handle the styles in a separate CSS file -->
+
+<link rel="stylesheet" type="text/css" href="main.css">
+
+<!-- Insert JavaScript library files for preloading here -->
+
+<script src="basicsupport.js"></script>
+<script src="simpledialogue3.js"></script>
+<script src="eventhandler5d.js"></script>
+
+</head>
+
+<body class="StdColours StdFont StdFontSize Centred">
+
+<!-- <p class="StdColours StdFont TitleFontSize Centred">Title</p> -->
+
+<h1 class="NoSwipe">The Invertebrate Fauna Of Norton Priory</h1>
+
+<!-- <p class="StdColours StdFont StdFontSize Justify">Some text</p> -->
+
+<div class="sidebar">
+
+<h2 class="StdColours StdFont StdFontSize Centred NoSwipe">External<br>Links:</h2>
+<br>
+<a href="https://www.nortonpriory.org/" target="_blank">
+	<button type="button">
+		<img src="buttons/norton_priory_logo.jpg" alt="Link to Norton Priory website via logo button">
+	</button>
+</a>
+
+<br><br>
+
+<a href="https://www.record-lrc.co.uk/" target="_blank">
+	<button type="button">
+		<img src="buttons/record_logo.jpg" alt="Link to rECOrd website via logo button">
+	</button>
+</a>
+
+<br><br>
+
+<a href="https://nbnatlas.org/" target="_blank">
+	<button type="button">
+		<img src="buttons/nbn_atlas_logo.png" alt="Link to NBN Atlas website via logo button">
+	</button>
+</a>
+<br><br>
+
+<a href="https://gridreferencefinder.com/" target="_blank">
+	<button type="button" class="StdColours StdFont StdFontSize Centred NoSwipe">
+	UK Grid<br>Reference Finder
+	</button>
+</a>
+<br><br>
+
+<a href="http://herbariaunited.org/gridrefVC/" target="_blank">
+	<button type="button" class="StdColours StdFont StdFontSize Centred NoSwipe">
+	Find Vice Counties<br>From Grid Refs<br>Here
+	</button>
+</a>
+
+<h2 class="StdColours StdFont StdFontSize Centred NoSwipe">Supplemental<br>Links:</h2>
+
+<button type="button" class="fancybio" id="about_me">
+</button>
+
+<br><br>
+
+<a href="flexdemo1.html" target="_blank">
+	<button type="button" class="fancydemo" id="about_me">
+	</button>
+</a>
+
+<br><br>
+</div>
+
+<div class="main StdColours StdFont StdFontSize Justify NoSwipe">
+
+	<p>
+	Norton Priory is a former mediaeval monastery located in Runcorn, Cheshire, associated with a manor house of later
+	construction, the latter having been converted into a museum in 2018. Follow the link in the sidebar to learn more
+	about this historic site, and the occupants thereof over different historical periods.
+	</p>
+	<br>
+	<p class="Indent">
+	The site is home to large stretches of ancient deciduous woodland, that has remained thankfully untouched by
+	malign human activity for around 800 years, and as a consequence, boasts an interesting and diverse invertebrate fauna.
+	During nearly a decade of biological recording at the site, I have photographed numerous species of invertebrates,
+	principally moths observed during moth trapping, but also various other invertebrates that have been attracted to the
+	light trap, such as various beetles, assorted Ichneumon wasps, caddis flies, lacewings ,various members of the Order
+	Hemiptera (true bugs, hoppers, aphids etc), spiders and millipedes.
+	</p>
+	<br>
+	<p class="Indent">
+	Click on the buttons below to view the different galleries of invertebrates found at the Norton Priory site. Each
+	gallery provides clickable thumbnails taking you to portraits of the individual species found at the site, Note that
+	where possible, each specimen is provided with a date of observation, and an Ordnance Survey grid reference indicating
+	where on the site the specimen was found.
+	</p>
+	<br>
+	<p class="Indent">
+	All data on the species observed, is sent to relevant County Recorders for <abbr title="The Watsonian Vice-Counties are geographical divisions of the UK,
+that were compiled by H. C. Watson in 1852, to provide a standard
+geographical framework for the recording of scientific data in the UK.
+VC58 is the designation for Cheshire, as defined by historical
+boundaries, rather than recent administrative boundaries. For more
+in-depth information, see the Wikipedia article covering this topic.">VC58</abbr>, and through them to the rECOrd
+	local biodiversity records centre, based at Chester Zoo. Data is then subsequently passed on to the National
+	Biodiversity Network (NBN), and added to their Atlas. More information about rECOrd and the National Biodiversity
+	Network can be obtained by clicking on the links in the sidebar to the left. Additionally, a button is provided to
+	launch the UK Grid Reference Finder webpage, which allows you to find the Ordnance Survey grid reference for any
+	location in the UK, by moving the map around and right-clicking on your location of choice. Likewise, to maintain
+	consistency with past historical records, a button is provided to take you to the Vice-County locator, which supplies
+	your correct Vice-County based upon your OS grid reference.
+	</p>
+	<br>
+
+	<div id="button_container">
+	
+	<!-- buttons go here -->
+
+	<a href="moths.html">
+	<button type="button" class="fancymoth" id="go_to_moths"></button>
+	</a>
+
+	<a href="spiders.html">
+	<button type="button" class="fancyspider" id="go_to_spiders"></button>
+	</a>
+
+	<a href="otherinsects.html">
+	<button type="button" class="fancyother" id="go_to_otherinsects"></button>
+	</a>
+	</div>
+
+	<br>
+
+</div>
+
+
+<!-- Dialogues go here -->
+
+<div class="Dialogue DlgColours StdFont StdFontSize NoSwipe Centred" id="bio_popup">
+
+<h1>About Me</h1>
+
+<div id="dlg_container">
+
+<p>
+Very briefly, I am David Edwards, a volunteer biological recorder
+who has been compiling biological recording data in the Halton area
+since 1996. I have taken in excess of 70,000 digital photos of the
+insect fauna of the locality, to provide evidence of sightings of
+species of interest, and the data I have supplied has become part of
+the repositories of both rECOrd, the local biodiversity recording
+organisation for Cheshire, and the National Biodiversity Network.
+</p>
+<br>
+<p>
+By the way, the image on the button you clicked on to pop up this
+brief biography, depicts a Green Hairstreak butterfly sitting on my
+finger posing for the camera!
+</p>
+<br><br>
+
+<button type="button" class="StdColours StdFont StdFontSize Centred NoSwipe" id="dismiss">
+Dismiss
+</button>
+<br>
+</div>
+
+</div>
+
+
+
+<div class="Dialogue DlgColours">
+
+</div>
+
+</body>
+
+<script src="main.js"></script>
+
+</html>
+

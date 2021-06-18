@@ -1,0 +1,442 @@
+
+<!-- HTML starter file -->
+
+<html>
+<head>
+
+<title>Coursework Flexbox Demonstrations</title>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Insert the CSS file reference here, and handle the styles in a separate CSS file -->
+
+<link rel="stylesheet" type="text/css" href="main.css">
+
+<!-- Insert JavaScript library files for preloading here -->
+
+<script src="basicsupport.js"></script>
+<script src="simpledialogue3.js"></script>
+<script src="eventhandler5d.js"></script>
+
+</head>
+
+<body class="StdColours StdFont StdFontSize Centred">
+
+<!-- <p class="StdColours StdFont TitleFontSize Centred">Title</p> -->
+
+<h1 class="NoSwipe">Flexbox Demonstrations</h1>
+
+<p class="StdColours StdFont StdFontSize Justify Truncated">
+Now it's time to demonstrate spacing between elements. For this, I'll use my set of 16 boxes ... if 
+the boxes are set to a percentage size, then flexbox sizes all of them to fit the container. If, on
+the other hand, a fixed width is chosen (in this case 120 pixels), then space appears (in grey below)
+where a fixed size contained element won't fit. The default method of handling the appearance of that
+extra space is given by the CSS declaration &quot;justify-content: flex-start&quot;, which forces all
+elements inside the container to begin at the zero coordinate value of the primary ordering axis (in
+this case the horizontal axis), and leaves space at the opposite end of the primary ordering axis:
+</p>
+<br><br>
+
+<div class="flexbox flexcontainer7">
+
+	<div class="flexchild7">
+	<h2>1</h2>
+	</div>
+
+	<div class="flexchild8">
+	<h2>2</h2>
+	</div>
+
+	<div class="flexchild7">
+	<h2>3</h2>
+	</div>
+
+	<div class="flexchild8">
+	<h2>4</h2>
+	</div>
+
+	<div class="flexchild7">
+	<h2>5</h2>
+	</div>
+
+	<div class="flexchild8">
+	<h2>6</h2>
+	</div>
+
+	<div class="flexchild7">
+	<h2>7</h2>
+	</div>
+
+	<div class="flexchild8">
+	<h2>8</h2>
+	</div>
+
+	<div class="flexchild7">
+	<h2>9</h2>
+	</div>
+
+	<div class="flexchild8">
+	<h2>10</h2>
+	</div>
+
+	<div class="flexchild7">
+	<h2>11</h2>
+	</div>
+
+	<div class="flexchild8">
+	<h2>12</h2>
+	</div>
+
+	<div class="flexchild7">
+	<h2>13</h2>
+	</div>
+
+	<div class="flexchild8">
+	<h2>14</h2>
+	</div>
+
+	<div class="flexchild7">
+	<h2>15</h2>
+	</div>
+
+	<div class="flexchild8">
+	<h2>16</h2>
+	</div>
+
+</div>
+<br><br>
+
+<p class="StdColours StdFont StdFontSize Justify Truncated">
+On the other hand, specifying other values for &quot;justify-content&quot; results in a different
+treatment of the blank space not occupied by contained elements. Below is the result of using the
+value &quot;center&quot; for the &quot;justify-content&quot; CSS property - the contained elements
+are centred within the flexbox, and the empty space is distributed on either side of each row equally:
+</p>
+<br><br>
+
+<div class="flexbox flexcontainer7" style="justify-content: center;">
+
+	<div class="flexchild7">
+	<h2>1</h2>
+	</div>
+
+	<div class="flexchild8">
+	<h2>2</h2>
+	</div>
+
+	<div class="flexchild7">
+	<h2>3</h2>
+	</div>
+
+	<div class="flexchild8">
+	<h2>4</h2>
+	</div>
+
+	<div class="flexchild7">
+	<h2>5</h2>
+	</div>
+
+	<div class="flexchild8">
+	<h2>6</h2>
+	</div>
+
+	<div class="flexchild7">
+	<h2>7</h2>
+	</div>
+
+	<div class="flexchild8">
+	<h2>8</h2>
+	</div>
+
+	<div class="flexchild7">
+	<h2>9</h2>
+	</div>
+
+	<div class="flexchild8">
+	<h2>10</h2>
+	</div>
+
+	<div class="flexchild7">
+	<h2>11</h2>
+	</div>
+
+	<div class="flexchild8">
+	<h2>12</h2>
+	</div>
+
+	<div class="flexchild7">
+	<h2>13</h2>
+	</div>
+
+	<div class="flexchild8">
+	<h2>14</h2>
+	</div>
+
+	<div class="flexchild7">
+	<h2>15</h2>
+	</div>
+
+	<div class="flexchild8">
+	<h2>16</h2>
+	</div>
+
+</div>
+<br><br>
+
+<p class="StdColours StdFont StdFontSize Justify Truncated">
+Here is the result of using &quot;space-between&quot; - the first and last elements are placed at the ends
+of the flexbox, and the empty space is distributed equally between the intervening elements:
+</p>
+<br><br>
+
+<div class="flexbox flexcontainer7" style="justify-content: space-between;">
+
+	<div class="flexchild7">
+	<h2>1</h2>
+	</div>
+
+	<div class="flexchild8">
+	<h2>2</h2>
+	</div>
+
+	<div class="flexchild7">
+	<h2>3</h2>
+	</div>
+
+	<div class="flexchild8">
+	<h2>4</h2>
+	</div>
+
+	<div class="flexchild7">
+	<h2>5</h2>
+	</div>
+
+	<div class="flexchild8">
+	<h2>6</h2>
+	</div>
+
+	<div class="flexchild7">
+	<h2>7</h2>
+	</div>
+
+	<div class="flexchild8">
+	<h2>8</h2>
+	</div>
+
+	<div class="flexchild7">
+	<h2>9</h2>
+	</div>
+
+	<div class="flexchild8">
+	<h2>10</h2>
+	</div>
+
+	<div class="flexchild7">
+	<h2>11</h2>
+	</div>
+
+	<div class="flexchild8">
+	<h2>12</h2>
+	</div>
+
+	<div class="flexchild7">
+	<h2>13</h2>
+	</div>
+
+	<div class="flexchild8">
+	<h2>14</h2>
+	</div>
+
+	<div class="flexchild7">
+	<h2>15</h2>
+	</div>
+
+	<div class="flexchild8">
+	<h2>16</h2>
+	</div>
+
+</div>
+<br><br>
+
+<p class="StdColours StdFont StdFontSize Justify Truncated">
+Meanwhile, &quot;space-around&quot; places an equal amount of padding around each contained element
+at each side, resulting in the middle elements being spaced twice as far apart, as the end elements are
+from the flexbox extremities:
+</p>
+<br><br>
+
+<div class="flexbox flexcontainer7" style="justify-content: space-around;">
+
+	<div class="flexchild7">
+	<h2>1</h2>
+	</div>
+
+	<div class="flexchild8">
+	<h2>2</h2>
+	</div>
+
+	<div class="flexchild7">
+	<h2>3</h2>
+	</div>
+
+	<div class="flexchild8">
+	<h2>4</h2>
+	</div>
+
+	<div class="flexchild7">
+	<h2>5</h2>
+	</div>
+
+	<div class="flexchild8">
+	<h2>6</h2>
+	</div>
+
+	<div class="flexchild7">
+	<h2>7</h2>
+	</div>
+
+	<div class="flexchild8">
+	<h2>8</h2>
+	</div>
+
+	<div class="flexchild7">
+	<h2>9</h2>
+	</div>
+
+	<div class="flexchild8">
+	<h2>10</h2>
+	</div>
+
+	<div class="flexchild7">
+	<h2>11</h2>
+	</div>
+
+	<div class="flexchild8">
+	<h2>12</h2>
+	</div>
+
+	<div class="flexchild7">
+	<h2>13</h2>
+	</div>
+
+	<div class="flexchild8">
+	<h2>14</h2>
+	</div>
+
+	<div class="flexchild7">
+	<h2>15</h2>
+	</div>
+
+	<div class="flexchild8">
+	<h2>16</h2>
+	</div>
+
+</div>
+<br><br>
+
+<p class="StdColours StdFont StdFontSize Justify Truncated">
+Meanwhile, &quot;space-evenly&quot; does just that - ensures that the contained elements are
+distributed evenly within the flexbox, with equal amounts of spacing between them:
+</p>
+<br><br>
+
+<div class="flexbox flexcontainer7" style="justify-content: space-evenly;">
+
+	<div class="flexchild7">
+	<h2>1</h2>
+	</div>
+
+	<div class="flexchild8">
+	<h2>2</h2>
+	</div>
+
+	<div class="flexchild7">
+	<h2>3</h2>
+	</div>
+
+	<div class="flexchild8">
+	<h2>4</h2>
+	</div>
+
+	<div class="flexchild7">
+	<h2>5</h2>
+	</div>
+
+	<div class="flexchild8">
+	<h2>6</h2>
+	</div>
+
+	<div class="flexchild7">
+	<h2>7</h2>
+	</div>
+
+	<div class="flexchild8">
+	<h2>8</h2>
+	</div>
+
+	<div class="flexchild7">
+	<h2>9</h2>
+	</div>
+
+	<div class="flexchild8">
+	<h2>10</h2>
+	</div>
+
+	<div class="flexchild7">
+	<h2>11</h2>
+	</div>
+
+	<div class="flexchild8">
+	<h2>12</h2>
+	</div>
+
+	<div class="flexchild7">
+	<h2>13</h2>
+	</div>
+
+	<div class="flexchild8">
+	<h2>14</h2>
+	</div>
+
+	<div class="flexchild7">
+	<h2>15</h2>
+	</div>
+
+	<div class="flexchild8">
+	<h2>16</h2>
+	</div>
+
+</div>
+<br><br>
+
+<p class="StdColours StdFont StdFontSize Justify Truncated">
+Needless to say, <i>numerous</i> other options exist, documented in full over at the CSS-Tricks
+website, which includes <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">a full exposition
+of the flexbox CSS system and its workings</a>.
+</p>
+<br><br>
+
+
+<a href="flexdemo3.html">
+	<button type="button" class="StdColours StdFont StdFontSize Centred NoSwipe">Go to Demo 3</button>
+</a>
+
+<br><br>
+
+
+
+<!-- Dialogues go here -->
+
+
+
+<div class="Dialogue DlgColours">
+
+</div>
+
+</body>
+
+<!-- <script src="main.js"></script> -->
+
+</html>
+

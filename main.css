@@ -1,0 +1,581 @@
+
+/* CSS Start File */
+
+
+html, body {
+
+/*
+
+Do this to make sure all container DIVS fit the viewport!
+The vw and vh units are percentages of the viewport width and height.
+For example, 1vw is 1% of the viewport width.
+
+*/
+
+width: 100vw;
+height: 100vh;
+
+}
+
+
+.StdColours {
+
+color: rgba(255, 255, 255, 1);
+background-color: rgba(0, 128, 0, 1);
+
+}
+
+.StdColours:disabled {
+
+color: rgba(96, 96, 96, 1);
+background-color: rgba(0, 96, 0, 1);
+
+}
+
+
+.StdFont {
+
+font-family: "Book Antiqua", "Times New Roman", "Times", serif;
+
+}
+
+
+.StdFontSize {
+
+font-size: 100%;
+
+}
+
+
+.TitleFontSize {
+
+font-size: 150%;
+
+}
+
+
+.Centred {
+
+text-align: center;
+
+}
+
+.Justify {
+
+text-align: justify;
+
+}
+
+
+.Left {
+
+text-align: left;
+
+}
+
+
+.Right {
+
+text-align: right;
+
+}
+
+.Indent {
+
+text-indent: 2rem;
+
+}
+
+.DlgColours {
+
+background-color: rgba(0, 112, 0, 1);
+color: rgba(255, 255, 255, 1);
+
+}
+
+
+.NoSwipe {
+
+user-select: none;	/* Stops text from being selectable! */
+
+}
+
+
+div {
+
+box-sizing: border-box;
+
+}
+
+
+/* Some basic text styles */
+
+p {
+
+margin-top: 0.125em;	/* Override standard browser settings to make text more compact */
+margin-bottom: 0.125em;
+
+}
+
+
+/* Set these styles for dialogue box DIVS. Use colour and font specifiers above to set those styles */
+
+div.Dialogue {
+
+display: none;
+position: absolute;
+width: 30em;
+height: 30em;
+top: 5em;
+left: 5em;
+
+border: 5px double rgba(0, 192, 192, 1);
+
+}
+
+
+div.sidebar {
+
+position: relative;
+float: left;
+width: 20%;
+border: 1px solid rgba(255, 255,0, 1);
+
+}
+
+div.main {
+
+position: relative;
+float: left;
+width: 75%;
+padding: 10px;
+margin-left: 10px;
+border: 1px solid rgba(255, 255, 0, 1);
+
+}
+
+
+
+button.fancymoth {
+
+width: 250px;
+height: 100px;
+background-image: url("buttons/go_to_moths.jpg");
+cursor: grab;
+
+}
+
+button.fancymoth:hover {
+
+width: 250px;
+height: 100px;
+background-image: url("buttons/go_to_moths_hover.jpg");
+cursor: grab;
+
+}
+
+
+button.fancymoth:active {
+
+width: 250px;
+height: 100px;
+background-image: url("buttons/go_to_moths_active.jpg");
+cursor: grab;
+
+}
+
+
+button.fancyspider {
+
+width: 250px;
+height: 100px;
+background-image: url("buttons/go_to_spiders.jpg");
+cursor: grab;
+
+}
+
+button.fancyspider:hover {
+
+width: 250px;
+height: 100px;
+background-image: url("buttons/go_to_spiders_hover.jpg");
+cursor: grab;
+
+}
+
+
+button.fancyspider:active {
+
+width: 250px;
+height: 100px;
+background-image: url("buttons/go_to_spiders_active.jpg");
+cursor: grab;
+
+}
+
+
+button.fancyother {
+
+width: 250px;
+height: 100px;
+background-image: url("buttons/go_to_others.jpg");
+cursor: grab;
+
+}
+
+button.fancyother:hover {
+
+width: 250px;
+height: 100px;
+background-image: url("buttons/go_to_others_hover.jpg");
+cursor: grab;
+
+}
+
+
+button.fancyother:active {
+
+width: 250px;
+height: 100px;
+background-image: url("buttons/go_to_others_active.jpg");
+cursor: grab;
+
+}
+
+
+button.fancybio {
+
+width: 250px;
+height: 100px;
+background-image: url("buttons/about_me.jpg");
+cursor: grab;
+
+}
+
+button.fancybio:hover {
+
+width: 250px;
+height: 100px;
+background-image: url("buttons/about_me_hover.jpg");
+cursor: grab;
+
+}
+
+button.fancybio:active {
+
+width: 250px;
+height: 100px;
+background-image: url("buttons/about_me_active.jpg");
+cursor: grab;
+
+}
+
+
+button.fancyback {
+
+width: 250px;
+height: 100px;
+background-image: url("buttons/back_button.jpg");
+cursor: grab;
+
+}
+
+button.fancyback:hover {
+
+width: 250px;
+height: 100px;
+background-image: url("buttons/back_button_hover.jpg");
+cursor: grab;
+
+}
+
+button.fancyback:active {
+
+width: 250px;
+height: 100px;
+background-image: url("buttons/back_button_active.jpg");
+cursor: grab;
+
+}
+
+
+button.fancydemo {
+
+width: 250px;
+height: 100px;
+background-image: url("buttons/go_to_demos.jpg");
+cursor: grab;
+
+}
+
+
+button.fancydemo:hover {
+
+width: 250px;
+height: 100px;
+background-image: url("buttons/go_to_demos_hover.jpg");
+cursor: grab;
+
+}
+
+
+button.fancydemo:active {
+
+width: 250px;
+height: 100px;
+background-image: url("buttons/go_to_demos_active.jpg");
+cursor: grab;
+
+}
+
+
+
+
+
+
+
+
+#button_container {
+
+width: 90%;
+text-align: center;
+
+}
+
+#dlg_container {
+
+position: relative;
+width: 90%;
+left: 5%;
+
+}
+
+div.gallery_img {
+
+float: left;
+margin: 5px;
+border: 1px solid rgba(0, 64, 0, 1);
+width: 200px;
+
+}
+
+div.gallery_img:hover {
+
+border: 1px solid rgba(255, 255, 0, 1);
+
+}
+
+div.gallery_img img {
+
+width: 100%;
+height: auto;
+
+}
+
+
+div.gallery_desc {
+
+padding: 15px;
+text-align: center;
+
+}
+
+.Truncated {
+
+position: relative;
+width: 90%;
+left: 5%;
+
+}
+
+div.gallery_container {
+
+position: relative;
+width: 90%;
+left: 10%;
+
+}
+
+
+/* Setting for ALL flex containers in the demo */
+
+.flexdemo {
+
+display: flex;
+
+}
+
+
+/* Setting for flex container #1 */
+
+.flexcontainer1 {
+
+position: relative;
+width: 60%;
+height: 400px; 
+left: 20%;
+border: 1px solid rgba(255, 255, 0, 1);
+
+}
+
+
+/* Settings for demo #1 children - standard box and its derivatives */
+
+
+.flexchild1 {
+
+width: 25%;
+background-color: rgba(0, 64, 0, 1);
+
+}
+
+
+.flexchild2 {
+
+width: 50%;
+background-color: rgba(0, 160, 0, 1);
+
+}
+
+
+/* settings for flex container 2 */
+
+.flexcontainer2 {
+
+position: relative;
+width: 60%;
+height: 400px; 
+left: 20%;
+border: 1px solid rgba(255, 255, 0, 1);
+
+}
+
+.flexchild3 {
+
+width: 500px;
+background-color: rgba(0, 64, 0, 1);
+
+}
+
+.flexchild4 {
+
+width: 1000px;
+background-color: rgba(0, 160, 0, 1);
+
+}
+
+.flexcontainer3 {
+
+display: flex;
+flex-flow: row nowrap;
+position: relative;
+width: 80%;
+left: 10%;
+
+}
+
+.flexcontainer4 {
+
+display: flex;
+flex-flow: row wrap;
+position: relative;
+width: 600px;
+left: 10%;
+
+}
+
+.flexcontainer5 {
+
+display: flex;
+flex-flow: column nowrap;
+position: relative;
+left: 10%;
+
+}
+
+.flexcontainer6 {
+
+display: flex;
+flex-flow: column wrap;
+position: relative;
+width: 80%;
+left: 10%;
+height: 300px;
+
+}
+
+
+.flexcontainer7 {
+
+display: flex;
+flex-flow: row wrap;
+/* justify-content: space-evenly; */
+position: relative;
+width: 80%;
+left: 10%;
+background-color: rgba(64, 64, 64, 1);
+
+}
+
+
+.flexchild5 {
+
+width: 25%;
+background-color: rgba(0, 64, 0, 1);
+
+}
+
+.flexchild6 {
+
+width: 25%;
+background-color: rgba(0, 160, 0, 1);
+
+}
+
+
+.flexchild7 {
+
+width: 120px;
+background-color: rgba(0, 64, 0, 1);
+
+}
+
+.flexchild8 {
+
+width: 120px;
+background-color: rgba(0, 160, 0, 1);
+
+}
+
+
+a:visited {
+
+color: rgba(0, 255, 255,1);
+
+}
+
+
+.flexbox_gallery_container {
+
+display: flex;
+flex-flow: wrap;
+position: relative;
+width: 90%;
+left: 5%;
+
+}
+
+.flexbox_gallery_item {
+
+display: flex;
+width: 200px;
+flex-direction: column;
+
+}
+
+
+.YellowBorder {
+
+border: 1px solid rgba(255, 255, 0, 1);
+
+}

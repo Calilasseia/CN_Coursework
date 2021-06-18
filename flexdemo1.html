@@ -1,0 +1,503 @@
+
+<!-- HTML starter file -->
+
+<html>
+<head>
+
+<title>Coursework Flexbox Demonstrations</title>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Insert the CSS file reference here, and handle the styles in a separate CSS file -->
+
+<link rel="stylesheet" type="text/css" href="main.css">
+
+<!-- Insert JavaScript library files for preloading here -->
+
+<script src="basicsupport.js"></script>
+<script src="simpledialogue3.js"></script>
+<script src="eventhandler5d.js"></script>
+
+</head>
+
+<body class="StdColours StdFont StdFontSize Centred">
+
+<!-- <p class="StdColours StdFont TitleFontSize Centred">Title</p> -->
+
+<h1 class="NoSwipe">Flexbox Demonstrations</h1>
+
+<p class="StdColours StdFont StdFontSize Justify Truncated">
+As part of the coursework requirements, a collection of flexbox demonstrations is provided below,
+illustrating the use of the CSS flexbox system to produce scalable responsive layouts. And, yes,
+you're going to be subjected to yet more of my favourite leafy greens on this page (there are
+sound scientific reasons I choose these colours, by the way ...). First, a simple demonstration
+using three columns, the outer ones being half the size of the inner one:
+</p>
+<br><br>
+
+<div class="flexdemo flexcontainer1"> <!-- container -->
+
+	<div class="flexchild1">
+		<h2>Column 1</h2>
+		<br>
+		<p class="StdFont StdfontSize">Some text I inserted into the box to test out
+		what happens when I resize ...
+	</div>
+
+	<div class="flexchild2">
+		<h2>Column 2</h2>
+		<br>
+		<p class="StdFont StdfontSize">Some text I inserted into the box to test out
+		what happens when I resize ...
+	</div>
+
+	<div class="flexchild1">
+		<h2>Column 3</h2>
+		<br>
+		<p class="StdFont StdfontSize">Some text I inserted into the box to test out
+		what happens when I resize ...
+	</div>
+
+</div>
+
+<br><br>
+
+<p class="StdColours StdFont StdFontSize Justify Truncated">
+Now let's see what happens when I experiment a little. For this experiment, I shall set the child DIVs to
+be a fixed size, and deliberately choose the sizes to be too large to fit in the container. But in addition,
+I shall replicate this experiment with overflow conditions set in CSS on the container DIV. First, without
+the overflow conditions ...
+</p>
+<br><br>
+
+<div class="flexdemo flexcontainer2"> <!-- container -->
+
+	<div class="flexchild3">
+		<h2>Column 1</h2>
+		<br>
+		<p class="StdFont StdfontSize">Some text I inserted into the box to test out
+		what happens when I resize ...
+	</div>
+
+	<div class="flexchild4">
+		<h2>Column 2</h2>
+		<br>
+		<p class="StdFont StdfontSize">Some text I inserted into the box to test out
+		what happens when I resize ...
+	</div>
+
+	<div class="flexchild3">
+		<h2>Column 3</h2>
+		<br>
+		<p class="StdFont StdfontSize">Some text I inserted into the box to test out
+		what happens when I resize ...
+	</div>
+
+</div>
+<br><br>
+
+<p class="StdColours StdFont StdFontSize Justify Truncated">
+In the above experiment, the flexbox behaved identically to the previous demo that didn't set absolute
+pixel sizes for the child DIVs inside the container. Now, let's repeat the experiment, to see what happens
+if I specify an overflow condition on the container DIV ...
+</p>
+<br><br>
+
+<div class="flexdemo flexcontainer2" style="overflox-x: scroll;"> <!-- container -->
+
+	<div class="flexchild3">
+		<h2>Column 1</h2>
+		<br>
+		<p class="StdFont StdfontSize">Some text I inserted into the box to test out
+		what happens when I resize ...
+	</div>
+
+	<div class="flexchild4">
+		<h2>Column 2</h2>
+		<br>
+		<p class="StdFont StdfontSize">Some text I inserted into the box to test out
+		what happens when I resize ...
+	</div>
+
+	<div class="flexchild3">
+		<h2>Column 3</h2>
+		<br>
+		<p class="StdFont StdfontSize">Some text I inserted into the box to test out
+		what happens when I resize ...
+	</div>
+
+</div>
+<br><br>
+
+<p class="StdColours StdFont StdFontSize Justify Truncated">
+Now this is interesting. Flexbox constrains the sizes of the child DIVs to fit inside the container,
+and ignores the overflow override I added to the container. Without flexbox, those DIVs would have
+resulted in a horizontal scrollbar appearing, like this:
+</p>
+<br><br>
+
+<div style="position: relative; width: 800px; left: 200px; overflow-x: scroll;"> <!-- container -->
+
+	<div class="flexchild3">
+		<h2>Column 1</h2>
+		<br>
+		<p class="StdFont StdfontSize">Some text I inserted into the box to test out
+		what happens when I resize ...
+	</div>
+
+	<div class="flexchild4" style="position: relative; top: 0px; left: 500px;">
+		<h2>Column 2</h2>
+		<br>
+		<p class="StdFont StdfontSize">Some text I inserted into the box to test out
+		what happens when I resize ...
+	</div>
+
+	<div class="flexchild3" style="position: relative; top: 0px; left: 1500px;">
+		<h2>Column 3</h2>
+		<br>
+		<p class="StdFont StdfontSize">Some text I inserted into the box to test out
+		what happens when I resize ...
+	</div>
+
+</div>
+<br><br>
+
+<p class="StdColours StdFont StdFontSize Justify Truncated">
+So, flexbox constrains ALL children to be sized as to fit in the container, once the container is
+associated with &quot;display: flex&quot; in CSS.
+</p>
+<br>
+<p class="StdColours StdFont StdFontSize Justify Truncated">
+Now, let's investigate in sequence, what happens when I have 16 boxes to arrange within the flexbox. First,
+we'll start with the standard defaults - "row nowrap" ...
+</p>
+<br><br>
+
+<div class="flexbox flexcontainer3">
+
+	<div class="flexchild5">
+	<h2>1</h2>
+	</div>
+
+	<div class="flexchild6">
+	<h2>2</h2>
+	</div>
+
+	<div class="flexchild5">
+	<h2>3</h2>
+	</div>
+
+	<div class="flexchild6">
+	<h2>4</h2>
+	</div>
+
+	<div class="flexchild5">
+	<h2>5</h2>
+	</div>
+
+	<div class="flexchild6">
+	<h2>6</h2>
+	</div>
+
+	<div class="flexchild5">
+	<h2>7</h2>
+	</div>
+
+	<div class="flexchild6">
+	<h2>8</h2>
+	</div>
+
+	<div class="flexchild5">
+	<h2>9</h2>
+	</div>
+
+	<div class="flexchild6">
+	<h2>10</h2>
+	</div>
+
+	<div class="flexchild5">
+	<h2>11</h2>
+	</div>
+
+	<div class="flexchild6">
+	<h2>12</h2>
+	</div>
+
+	<div class="flexchild5">
+	<h2>13</h2>
+	</div>
+
+	<div class="flexchild6">
+	<h2>14</h2>
+	</div>
+
+	<div class="flexchild5">
+	<h2>15</h2>
+	</div>
+
+	<div class="flexchild6">
+	<h2>16</h2>
+	</div>
+
+</div>
+<br><br>
+
+<p class="StdColours StdFont StdFontSize Justify Truncated">
+The &quot;row nowrap&quot; setting simply arranges them in a row of 16 boxes within the container.
+Now watch what happens when we change to &quot;row wrap&quot;, with a container size set to 600 pixels ...
+</p>
+<br><br>
+
+<div class="flexbox flexcontainer4">
+
+	<div class="flexchild5">
+	<h2>1</h2>
+	</div>
+
+	<div class="flexchild6">
+	<h2>2</h2>
+	</div>
+
+	<div class="flexchild5">
+	<h2>3</h2>
+	</div>
+
+	<div class="flexchild6">
+	<h2>4</h2>
+	</div>
+
+	<div class="flexchild5">
+	<h2>5</h2>
+	</div>
+
+	<div class="flexchild6">
+	<h2>6</h2>
+	</div>
+
+	<div class="flexchild5">
+	<h2>7</h2>
+	</div>
+
+	<div class="flexchild6">
+	<h2>8</h2>
+	</div>
+
+	<div class="flexchild5">
+	<h2>9</h2>
+	</div>
+
+	<div class="flexchild6">
+	<h2>10</h2>
+	</div>
+
+	<div class="flexchild5">
+	<h2>11</h2>
+	</div>
+
+	<div class="flexchild6">
+	<h2>12</h2>
+	</div>
+
+	<div class="flexchild5">
+	<h2>13</h2>
+	</div>
+
+	<div class="flexchild6">
+	<h2>14</h2>
+	</div>
+
+	<div class="flexchild5">
+	<h2>15</h2>
+	</div>
+
+	<div class="flexchild6">
+	<h2>16</h2>
+	</div>
+
+</div>
+<br><br>
+
+<p class="StdColours StdFont StdFontSize Justify Truncated">
+Now it's time to try &quot;column nowrap&quot; and see what happens ...
+</p>
+<br><br>
+
+<div class="flexbox flexcontainer5">
+
+	<div class="flexchild5">
+	<h2>1</h2>
+	</div>
+
+	<div class="flexchild6">
+	<h2>2</h2>
+	</div>
+
+	<div class="flexchild5">
+	<h2>3</h2>
+	</div>
+
+	<div class="flexchild6">
+	<h2>4</h2>
+	</div>
+
+	<div class="flexchild5">
+	<h2>5</h2>
+	</div>
+
+	<div class="flexchild6">
+	<h2>6</h2>
+	</div>
+
+	<div class="flexchild5">
+	<h2>7</h2>
+	</div>
+
+	<div class="flexchild6">
+	<h2>8</h2>
+	</div>
+
+	<div class="flexchild5">
+	<h2>9</h2>
+	</div>
+
+	<div class="flexchild6">
+	<h2>10</h2>
+	</div>
+
+	<div class="flexchild5">
+	<h2>11</h2>
+	</div>
+
+	<div class="flexchild6">
+	<h2>12</h2>
+	</div>
+
+	<div class="flexchild5">
+	<h2>13</h2>
+	</div>
+
+	<div class="flexchild6">
+	<h2>14</h2>
+	</div>
+
+	<div class="flexchild5">
+	<h2>15</h2>
+	</div>
+
+	<div class="flexchild6">
+	<h2>16</h2>
+	</div>
+
+</div>
+<br><br>
+
+<p class="StdColours StdFont StdFontSize Justify Truncated">
+And likewise, it's time to try &quot;column wrap&quot; and see what happens (this time with the height
+of the container set to 300 pixels)...
+</p>
+<br><br>
+
+<div class="flexbox flexcontainer6">
+
+	<div class="flexchild5">
+	<h2>1</h2>
+	</div>
+
+	<div class="flexchild6">
+	<h2>2</h2>
+	</div>
+
+	<div class="flexchild5">
+	<h2>3</h2>
+	</div>
+
+	<div class="flexchild6">
+	<h2>4</h2>
+	</div>
+
+	<div class="flexchild5">
+	<h2>5</h2>
+	</div>
+
+	<div class="flexchild6">
+	<h2>6</h2>
+	</div>
+
+	<div class="flexchild5">
+	<h2>7</h2>
+	</div>
+
+	<div class="flexchild6">
+	<h2>8</h2>
+	</div>
+
+	<div class="flexchild5">
+	<h2>9</h2>
+	</div>
+
+	<div class="flexchild6">
+	<h2>10</h2>
+	</div>
+
+	<div class="flexchild5">
+	<h2>11</h2>
+	</div>
+
+	<div class="flexchild6">
+	<h2>12</h2>
+	</div>
+
+	<div class="flexchild5">
+	<h2>13</h2>
+	</div>
+
+	<div class="flexchild6">
+	<h2>14</h2>
+	</div>
+
+	<div class="flexchild5">
+	<h2>15</h2>
+	</div>
+
+	<div class="flexchild6">
+	<h2>16</h2>
+	</div>
+
+</div>
+<br><br>
+
+<p class="StdColours StdFont StdFontSize Justify Truncated">
+Notice in the above examples, that a choice of <i>primary ordering axis</i> is made ("row" for
+horizontal, "column" for vertical), and that contained elements are ordered along that axis first.
+If the contained elements extend to more than one row or column, then they are ordered again along
+that secondary ordering axis, after the primary ordering has bene performed.
+</p>
+
+<p class="StdColours StdFont StdFontSize Justify Truncated">
+And now, it's time for flexbox demo set 2!!!
+</p>
+<br><br>
+
+<a href="flexdemo2.html">
+	<button type="button" class="StdColours StdFont StdFontSize Centred NoSwipe">Go to Demo 2</button>
+</a>
+
+<br><br>
+
+
+
+<!-- Dialogues go here -->
+
+
+
+<div class="Dialogue DlgColours">
+
+</div>
+
+</body>
+
+<!-- <script src="main.js"></script> -->
+
+</html>
+
